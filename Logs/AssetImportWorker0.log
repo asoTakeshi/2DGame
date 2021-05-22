@@ -1,0 +1,351 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.2f1 (8fd9074bf66c) revision 9427207'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.985; Version 2009; 64bit' Language: 'ja' Physical Memory: 16238 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.2f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/xyz11/2DGame
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+53837
+Successfully changed project path to: C:/Users/xyz11/2DGame
+C:/Users/xyz11/2DGame
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 42.56 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.2f1 (8fd9074bf66c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/xyz11/2DGame/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics (ID=0x9b41)
+    Vendor:   
+    VRAM:     8119 MB
+    Driver:   27.20.100.9126
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56964
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001609 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 41.92 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.607 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001506 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 44.09 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.870 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1821 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.2 MB.
+System memory in use after: 88.3 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2272.
+Total: 6.003700 ms (FindLiveObjects: 0.444700 ms CreateObjectMapping: 0.263100 ms MarkObjects: 5.125100 ms  DeleteObjects: 0.167500 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/UnityChan/2DUnitychan/Animations
+  artifactKey: Guid(0f2f73c04693a49cd937bfb0f5e90c34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Animations using Guid(0f2f73c04693a49cd937bfb0f5e90c34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36bf71e4749c713994148bf02591d5fb') in 0.018002 seconds
+  Import took 0.024283 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Jack
+  artifactKey: Guid(78a1003a391204321b390ef8c69c2f6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Jack using Guid(78a1003a391204321b390ef8c69c2f6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53a12564a0fef6ae87c78310c5f85e42') in 0.009824 seconds
+  Import took 0.014634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.932867 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Jack/Jack_Blink_1.png
+  artifactKey: Guid(7490c08fc66694b29b077df5f1ecbfcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Jack/Jack_Blink_1.png using Guid(7490c08fc66694b29b077df5f1ecbfcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e53887bf2f6e23d4a872315aee29de0f') in 0.088672 seconds
+  Import took 0.091501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.504377 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Jack/Jack_Blink_2.png
+  artifactKey: Guid(64f2c76e6d4574fe8972325e8433efc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Jack/Jack_Blink_2.png using Guid(64f2c76e6d4574fe8972325e8433efc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78ca230f17be0ce6d7f847edab3586fc') in 0.012095 seconds
+  Import took 0.015435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001955 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Jack/Jack_Blink_2.png
+  artifactKey: Guid(64f2c76e6d4574fe8972325e8433efc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Jack/Jack_Blink_2.png using Guid(64f2c76e6d4574fe8972325e8433efc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78ca230f17be0ce6d7f847edab3586fc') in 0.010297 seconds
+  Import took 0.014311 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.486136 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Holger/Holger_Blink_2.png
+  artifactKey: Guid(cdd7879b877014faba51d6e6381640c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Holger/Holger_Blink_2.png using Guid(cdd7879b877014faba51d6e6381640c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f0a61276b07ee219ae6627722a7fdf7') in 0.014235 seconds
+  Import took 0.017130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.102597 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Blink_1.png
+  artifactKey: Guid(4cf3316280c394e3bb04f498f9a9892a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Blink_1.png using Guid(4cf3316280c394e3bb04f498f9a9892a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da1ca0cf3230f0de49607161121b9237') in 0.015995 seconds
+  Import took 0.019184 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.362063 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Damage_down_1.png
+  artifactKey: Guid(21d31a21dfbb9475a9d3dc6640212e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Damage_down_1.png using Guid(21d31a21dfbb9475a9d3dc6640212e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5625f00de156655e20bfa5df9bcd4348') in 0.014022 seconds
+  Import took 0.016905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.673309 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Damage_down_2.png
+  artifactKey: Guid(8c8ad6a756fce4e5293b6c5bc2e0be43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Damage_down_2.png using Guid(8c8ad6a756fce4e5293b6c5bc2e0be43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f07bfeed1cc98374ab7033ac082e379') in 0.015145 seconds
+  Import took 0.018122 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.559415 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Damage_down_3.png
+  artifactKey: Guid(8f1f21435fe1749b491c643f1b3302b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Damage_down_3.png using Guid(8f1f21435fe1749b491c643f1b3302b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8968cc7bcaa74e3c7785aac78305258d') in 0.018717 seconds
+  Import took 0.022380 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.289688 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Damage_3.png
+  artifactKey: Guid(75621aeb04f6744ef881c5e32c8c92d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Damage_3.png using Guid(75621aeb04f6744ef881c5e32c8c92d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c66ac50718e3ef82aa0d9a9ef2fb5605') in 0.014623 seconds
+  Import took 0.017933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.540818 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Crouch_1.png
+  artifactKey: Guid(ae5ff218e6619438eb0d5541b5cee7e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Crouch_1.png using Guid(ae5ff218e6619438eb0d5541b5cee7e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a73bc03d16f40c056f0610a03466d31f') in 0.010040 seconds
+  Import took 0.013226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001252 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Crouch_1.png
+  artifactKey: Guid(ae5ff218e6619438eb0d5541b5cee7e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Crouch_1.png using Guid(ae5ff218e6619438eb0d5541b5cee7e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a73bc03d16f40c056f0610a03466d31f') in 0.015581 seconds
+  Import took 0.019003 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.503873 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Crouch_2.png
+  artifactKey: Guid(71c0e3a499fa34b39b3eb13eba18e4d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Crouch_2.png using Guid(71c0e3a499fa34b39b3eb13eba18e4d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c1a0cc6950057684b81fcc97861d095') in 0.014683 seconds
+  Import took 0.018278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.527766 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_10.png
+  artifactKey: Guid(da9a21e3ff2d24de8bd32a141ac11959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_10.png using Guid(da9a21e3ff2d24de8bd32a141ac11959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc2cb6f7079ceaa42323cbf459f2971d') in 0.014893 seconds
+  Import took 0.017768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.315232 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_9.png
+  artifactKey: Guid(87dc4b3b54b234f149610d225113b22a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_9.png using Guid(87dc4b3b54b234f149610d225113b22a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4640af11a0e99ba024739a9b3c4ab7d6') in 0.015074 seconds
+  Import took 0.018298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.353091 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_11.png
+  artifactKey: Guid(48583118c3dc14c589756c2bc997945e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_11.png using Guid(48583118c3dc14c589756c2bc997945e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11f2480619b3c7a8bcca29b2d2882d96') in 0.015305 seconds
+  Import took 0.018305 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.241025 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_1.png
+  artifactKey: Guid(8c49265184e5c407baa42ab533efceff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_1.png using Guid(8c49265184e5c407baa42ab533efceff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32bf5844cc526844073997cd64ed23c9') in 0.013772 seconds
+  Import took 0.017520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.670033 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_2.png
+  artifactKey: Guid(a17a4cb41fbae40ea828c83c0d4a8cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_2.png using Guid(a17a4cb41fbae40ea828c83c0d4a8cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eaa4b34987e2cd79e29dbb0d5a3dfe8') in 0.015924 seconds
+  Import took 0.019723 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.745784 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_3.png
+  artifactKey: Guid(1e2952f3ab4194a21abf673249007d12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_3.png using Guid(1e2952f3ab4194a21abf673249007d12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afd4cde8fd19b711ba9743591c235ae1') in 0.014363 seconds
+  Import took 0.017787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.696185 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_4.png
+  artifactKey: Guid(915ce97da3b374a64bf603cdeb5d59da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_4.png using Guid(915ce97da3b374a64bf603cdeb5d59da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38c036e229ba252faf660e8c3421f9d8') in 0.014786 seconds
+  Import took 0.018415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.828048 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_5.png
+  artifactKey: Guid(c1f870aa69ad44f00a2a2797dffde8a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_5.png using Guid(c1f870aa69ad44f00a2a2797dffde8a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5c69621152861616b9639f28ba7a033') in 0.013822 seconds
+  Import took 0.017189 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.538509 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_6.png
+  artifactKey: Guid(4f2ab8d2ae9aa4c98be16530db4fe019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_6.png using Guid(4f2ab8d2ae9aa4c98be16530db4fe019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fc0bde7a932bc5578fe58be61d470cb') in 0.013798 seconds
+  Import took 0.017155 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 154.675617 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run.anim
+  artifactKey: Guid(90dc8ce5df0a29e4281bf20d8b9a0bac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run.anim using Guid(90dc8ce5df0a29e4281bf20d8b9a0bac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29bbdeb8c76b8e6ab154281746cb1ff6') in 0.010956 seconds
+  Import took 0.014209 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.674340 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_6.controller
+  artifactKey: Guid(ec59f304df292a04d899e131a616e9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_6.controller using Guid(ec59f304df292a04d899e131a616e9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48741cbbeb1ce721f49f02e5931828cb') in 0.004705 seconds
+  Import took 0.007870 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000803 seconds.
+  path: Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_6.controller
+  artifactKey: Guid(ec59f304df292a04d899e131a616e9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityChan/2DUnitychan/Sprites/Cindy/Cindy_Run_6.controller using Guid(ec59f304df292a04d899e131a616e9e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48741cbbeb1ce721f49f02e5931828cb') in 0.002833 seconds
+  Import took 0.005944 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001520 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.820 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1811 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 90.8 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2285.
+Total: 1.891300 ms (FindLiveObjects: 0.174000 ms CreateObjectMapping: 0.065400 ms MarkObjects: 1.634200 ms  DeleteObjects: 0.016400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001501 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.792 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1811 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.8 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2288.
+Total: 1.892500 ms (FindLiveObjects: 0.172900 ms CreateObjectMapping: 0.081500 ms MarkObjects: 1.621400 ms  DeleteObjects: 0.015200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001653 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.847 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1811 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.8 MB.
+System memory in use after: 90.9 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2291.
+Total: 4.173400 ms (FindLiveObjects: 0.535900 ms CreateObjectMapping: 0.330400 ms MarkObjects: 3.290300 ms  DeleteObjects: 0.014400 ms)
+
