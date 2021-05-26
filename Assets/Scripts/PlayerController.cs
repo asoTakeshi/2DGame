@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;                      // コンポーネントの取得用
     private Animator anim;
     private float limitPosX = 45.5f;           // 横方向の制限値
-    private float limitPosY = 8.45f;          // 縦方向の制限値
+    private float limitPosY = 11.45f;          // 縦方向の制限値
     private float scale;                         // 向きの設定に利用する
     public float moveSpeed;                      // 移動速度
     public float jumpPower;                      // ジャンプ・浮遊力
@@ -40,18 +40,29 @@ public class PlayerController : MonoBehaviour
         //{
 
 
-            // ジャンプ
-            if (Input.GetKeyDown(KeyCode.Space) && this.rb.velocity.y == 0)
-            {
-                Jump();
-            }
+        // ジャンプ
+        if (Input.GetKeyDown(KeyCode.Space) && this.rb.velocity.y == 0)
+        {
+            Jump();
+        }
 
-            // 接地していない(空中にいる)間で、落下中の場合
-            if (isGrounded == false && rb.velocity.y < 0.15f)
-            {
-                // 落下アニメを繰り返す
-                anim.SetTrigger("Fall");
-            }
+        if (isGrounded == true)
+        {
+            anim.ResetTrigger("Fall");
+
+        }
+        // 接地していない(空中にいる)間で、落下中の場合
+        if (isGrounded == false && rb.velocity.y < 0.15f)
+        {
+
+            //if(anim.GetCurrentAnimatorStateInfo(0).IsName ("Jump_Up"))
+            //{
+
+            //}
+
+            // 落下アニメを繰り返す
+            anim.SetTrigger("Fall");
+        }
         //}
         //else
         //{
