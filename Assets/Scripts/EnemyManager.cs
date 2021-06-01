@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    [Header("‰ÁŽZƒXƒRƒA")]
+    public int myScore = 10;
     [Header("‘Ì—Í")]
     public int hp;
     public GameObject deathEffectPrefab;
@@ -15,6 +17,14 @@ public class EnemyManager : MonoBehaviour
         {
             Instantiate(deathEffectPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
+        }
+    }
+    void FixedUpdate()
+    {
+        if (GManager.instance != null)
+        {
+
+            GManager.instance.score += myScore;
         }
     }
 }

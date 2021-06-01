@@ -100,29 +100,29 @@ public class PlayerController2 : MonoBehaviour
     ////* 新しいメソッドを１つ追加　ここから *////
 
     // IsTriggerがオンのコライダーを持つゲームオブジェクトを通過した場合に呼び出されるメソッド
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        // 通過したコライダーを持つゲームオブジェクトの Tag が Coin の場合
-        if (col.gameObject.tag == "Coin")
-        {
-            // 通過したコインのゲームオブジェクトの持つ Coin スクリプトを取得し、point 変数の値をキャラの持つ coinPoint 変数に加算
-            coinPoint += col.gameObject.GetComponent<Coin>().point;
+    //private void OnTriggerEnter2D(Collider2D col)
+    //{
+    //    // 通過したコライダーを持つゲームオブジェクトの Tag が Coin の場合
+    //    if (col.gameObject.tag == "Coin")
+    //    {
+    //        // 通過したコインのゲームオブジェクトの持つ Coin スクリプトを取得し、point 変数の値をキャラの持つ coinPoint 変数に加算
+    //        coinPoint += col.gameObject.GetComponent<Coin>().point;
 
-            //uiManager.UpdateDisplayScore(coinPoint);
-            // 通過したコインのゲームオブジェクトを破壊する
-            Destroy(col.gameObject);
+    //        //uiManager.UpdateDisplayScore(coinPoint);
+    //        // 通過したコインのゲームオブジェクトを破壊する
+    //        Destroy(col.gameObject);
 
-            //コインとの接触用のSE(AudioClip)を再生する
-            AudioSource.PlayClipAtPoint(coinSE, transform.position);
+    //        //コインとの接触用のSE(AudioClip)を再生する
+    //        AudioSource.PlayClipAtPoint(coinSE, transform.position);
 
-            // 接触した際のエフェクトを、コインの位置に、クローンとして生成する。生成されたゲームオブジェクトを変数へ代入
-            GameObject coinEffect = Instantiate(coinEffectPrefab, transform.position, Quaternion.identity);
+    //        // 接触した際のエフェクトを、コインの位置に、クローンとして生成する。生成されたゲームオブジェクトを変数へ代入
+    //        GameObject coinEffect = Instantiate(coinEffectPrefab, transform.position, Quaternion.identity);
 
-            // エフェクトを 0.3 秒後に破棄
-            Destroy(coinEffect, 0.3f);
+    //        // エフェクトを 0.3 秒後に破棄
+    //        Destroy(coinEffect, 0.3f);
 
-        }
-    }
+    //    }
+    //}
     /// <summary>
     /// ゲームオーバー
     /// </summary>

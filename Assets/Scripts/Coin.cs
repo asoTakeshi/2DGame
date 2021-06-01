@@ -4,5 +4,20 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int point;
+    [Header("加算するスコア")] public int myScore;
+    [Header("プレイヤーの判定")] public PlayerTriggerCheck playerCheck;
+
+    // Update is called once per frame
+    void Update()
+    {
+        //プレイヤーが判定内に入ったら
+        if (playerCheck.isOn)
+        {
+            if (GManager.instance != null)
+            {
+                GManager.instance.score += myScore;
+                Destroy(this.gameObject);
+            }
+        }
+    }
 }

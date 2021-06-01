@@ -24,8 +24,9 @@ public class PlayerController : MonoBehaviour
     float coolTime = 0.3f;                       //待機時間
     float leftCoolTime;　　　　　　　　　　 // 待機している時間
     bool isRight;
-    
-    
+    public int coinPoint;
+    public GManager gManager;
+
 
 
     [SerializeField, Header("Linecast用 地面判定レイヤー")]
@@ -204,28 +205,28 @@ public class PlayerController : MonoBehaviour
             Destroy(knockbackEffect, 0.5f);
         }
     }
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        // 通過したコライダーを持つゲームオブジェクトの Tag が Coin の場合
-        if (col.gameObject.tag == "gem")
-        {
-            // 通過したコインのゲームオブジェクトの持つ Coin スクリプトを取得し、point 変数の値をキャラの持つ coinPoint 変数に加算
-            gemPoint += col.gameObject.GetComponent<Coin>().point;
+    //private void OnTriggerEnter2D(Collider2D col)
+    //{
+    //    // 通過したコライダーを持つゲームオブジェクトの Tag が Coin の場合
+    //    if (col.gameObject.tag == "gem")
+    //    {
+    //        // 通過したコインのゲームオブジェクトの持つ Coin スクリプトを取得し、point 変数の値をキャラの持つ coinPoint 変数に加算
+    //        gemPoint += col.gameObject.GetComponent<Coin>().point;
 
-            //uiManager.UpdateDisplayScore(coinPoint);
-            // 通過したコインのゲームオブジェクトを破壊する
-            Destroy(col.gameObject);
+    //        gManager.UpdateDisplayScore(coinPoint);
+    //        // 通過したコインのゲームオブジェクトを破壊する
+    //        Destroy(col.gameObject);
 
-            //コインとの接触用のSE(AudioClip)を再生する
-            //AudioSource.PlayClipAtPoint(coinSE, transform.position);
+    //        //コインとの接触用のSE(AudioClip)を再生する
+    //        //AudioSource.PlayClipAtPoint(coinSE, transform.position);
 
-            // 接触した際のエフェクトを、コインの位置に、クローンとして生成する。生成されたゲームオブジェクトを変数へ代入
-            //GameObject coinEffect = Instantiate(coinEffectPrefab, transform.position, Quaternion.identity);
+    //        // 接触した際のエフェクトを、コインの位置に、クローンとして生成する。生成されたゲームオブジェクトを変数へ代入
+    //        GameObject coinEffect = Instantiate(coinEffectPrefab, transform.position, Quaternion.identity);
 
-            // エフェクトを 0.3 秒後に破棄
-            //Destroy(coinEffect, 0.3f);
+    //        // エフェクトを 0.3 秒後に破棄
+    //        Destroy(coinEffect, 0.3f);
 
-        }
-    }
+    //    }
+    //}
     
 }
