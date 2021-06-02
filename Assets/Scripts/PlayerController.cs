@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public float jumpPower;                      // ジャンプ・浮遊力
     public bool isGrounded;
     bool gojump = false;
-    private bool isGameOver;                     // GameOver状態の判定用。true ならゲームオーバー。
+    private bool isGameOver = false;                    // GameOver状態の判定用。true ならゲームオーバー。
     public float knockbackPower;              // 敵と接触した際に吹き飛ばされる力
     public int gemPoint;                       // コインを獲得すると増えるポイントの総数
     public GameObject bulletPrefab;
@@ -26,6 +26,13 @@ public class PlayerController : MonoBehaviour
     bool isRight;
     public int coinPoint;
     public GManager gManager;
+    private string enemyTag = "Enemy";
+    private bool isDown = false;
+   // private bool nonDownAnim = false;
+    private string deadAreaTag = "DeadArea";
+    public UIManager uiManager;
+
+
 
 
 
@@ -89,6 +96,27 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+    //やられた時の処理 New!
+    private void ReceiveDamage(bool downAnim)
+    {
+        if (isDown)
+        {
+            return;
+        }
+        else
+        {
+            if (downAnim)
+            {
+                anim.Play("Damage_Down");
+            }
+            else
+            {
+                //nonDownAnim = true;
+            }
+            isDown = true;
+            GManager.instance.SubLifeNum();
+        }
+    }
     void Shot()
     {
         leftCoolTime -= Time.deltaTime;
@@ -121,6 +149,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+
         
         // 移動
         Move();
@@ -188,45 +217,49 @@ public class PlayerController : MonoBehaviour
         // 接触したコライダーを持つゲームオブジェクトのTagがEnemyなら 
         if (col.gameObject.tag == "Enemy")
         {
-            
-            // キャラと敵の位置から距離と方向を計算
-            Vector3 direction = (transform.position - col.transform.position).normalized;
-
-            // 敵の反対側にキャラを吹き飛ばす
-            transform.position += direction * knockbackPower;
-
-            // 敵との接触用のSE(AudioClip)を再生する
-            //AudioSource.PlayClipAtPoint(knockbackSE, transform.position);
-
-            // 接触した際のエフェクトを、敵の位置に、クローンとして生成する。生成されたゲームオブジェクトを変数へ代入
-            GameObject knockbackEffect = Instantiate(knockbackEffectPrefab, col.transform.position, Quaternion.identity);
-
-            // エフェクトを 0.5 秒後に破棄
-            Destroy(knockbackEffect, 0.5f);
+            //anim.Play("Damage_Down");
+            //isDown = true;
+            ReceiveDamage(true);
         }
+
     }
-    //private void OnTriggerEnter2D(Collider2D col)
-    //{
-    //    // 通過したコライダーを持つゲームオブジェクトの Tag が Coin の場合
-    //    if (col.gameObject.tag == "gem")
-    //    {
-    //        // 通過したコインのゲームオブジェクトの持つ Coin スクリプトを取得し、point 変数の値をキャラの持つ coinPoint 変数に加算
-    //        gemPoint += col.gameObject.GetComponent<Coin>().point;
 
-    //        gManager.UpdateDisplayScore(coinPoint);
-    //        // 通過したコインのゲームオブジェクトを破壊する
-    //        Destroy(col.gameObject);
+    public bool IsContinueWaiting()
+    {
+        return IsDownAnimEnd();
+    }
 
-    //        //コインとの接触用のSE(AudioClip)を再生する
-    //        //AudioSource.PlayClipAtPoint(coinSE, transform.position);
+    private bool IsDownAnimEnd()
+    {
+        //Debug.Log(isDown);
+        if (isDown && anim != null)
+        {
+            AnimatorStateInfo currentState = anim.GetCurrentAnimatorStateInfo(0);
+            if (currentState.IsName("Damage_Down"))
+            {
+                //Debug.Log("通過");
+                if (currentState.normalizedTime >= 1)
+                {
+                    Debug.Log("通過");
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
-    //        // 接触した際のエフェクトを、コインの位置に、クローンとして生成する。生成されたゲームオブジェクトを変数へ代入
-    //        GameObject coinEffect = Instantiate(coinEffectPrefab, transform.position, Quaternion.identity);
+    /// <summary>
+    /// ゲームオーバー
+    /// </summary>
+    public void GameOver()
+    {
+        isGameOver = true;
 
-    //        // エフェクトを 0.3 秒後に破棄
-    //        Destroy(coinEffect, 0.3f);
+        // Console ビューに isGameOver 変数の値を表示する。ここが実行されると true と表示される
+        Debug.Log(isGameOver);
 
-    //    }
-    //}
-    
+        // 画面にゲームオーバー表示を行う
+        //uiManager.DisplayGameOverInfo();
+    }
+
 }

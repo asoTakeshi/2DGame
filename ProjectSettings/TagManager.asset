@@ -10,6 +10,7 @@ TagManager:
   - Fade
   - gem
   - Ground
+  - DeadArea
   layers:
   - Default
   - TransparentFX

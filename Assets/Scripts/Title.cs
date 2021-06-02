@@ -12,7 +12,7 @@ public class Title : MonoBehaviour
     // スタートボタンが押されると呼ばれる
     public void PressStart()
     {
-        Debug.Log("Press Start!");
+            
         if (!firstPush)
         {
             Debug.Log("Go Next Scene!");
