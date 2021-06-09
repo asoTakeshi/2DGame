@@ -163,19 +163,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isDown && !GManager.instance.isGameOver && !GManager.instance.isStageClear)
+        if (!isDown && !GManager.instance.isGameOver)
         {
 
         }
-        else
-        {
-            if (!isClearMotion && GManager.instance.isStageClear)
-            {
-                anim.Play("player_clear");
-                isClearMotion = true;
-            }
-           
-        }
+        
 
         // ˆÚ“®
         Move();

@@ -20,7 +20,7 @@ public class GManager : MonoBehaviour
     public int defaultLifeNum;
     [HideInInspector] 
     public bool isGameOver = false;
-    [HideInInspector] public bool isStageClear = false;
+    //[HideInInspector] public bool isStageClear = false;
 
     private AudioSource audioSource = null;
 
