@@ -15,6 +15,7 @@ public class EnemyManager : MonoBehaviour
         hp -= damage;
         if (hp <= 0)
         {
+            GManager.instance.score += myScore;
             Instantiate(deathEffectPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
         }
@@ -24,7 +25,6 @@ public class EnemyManager : MonoBehaviour
         if (GManager.instance != null)
         {
 
-            GManager.instance.score += myScore;
-        }
+        }    
     }
 }

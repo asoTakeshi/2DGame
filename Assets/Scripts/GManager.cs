@@ -18,7 +18,7 @@ public class GManager : MonoBehaviour
     public int lifeNum;
     [Header("デフォルトの残機")]
     public int defaultLifeNum;
-    [HideInInspector] 
+    //[HideInInspector] 
     public bool isGameOver = false;
     //[HideInInspector] public bool isStageClear = false;
 

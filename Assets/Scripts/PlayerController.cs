@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
     public int coinPoint;
     public GManager gManager;
     private string enemyTag = "Enemy";
-    private bool isDown = false;
+    [SerializeField]
+    public bool isDown = false;
     private string deadAreaTag = "DeadArea";
     public UIManager uiManager;
     private bool isJump = false;
@@ -120,7 +121,8 @@ public class PlayerController : MonoBehaviour
         {
             if (downAnim)
             {
-                anim.Play("Damage_Down");
+                //anim.Play("Damage_Down");
+                anim.SetTrigger("Down");
             }
             else
             {
@@ -255,7 +257,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            return IsDownAnimEnd() || nonDownAnim;  
+            return IsDownAnimEnd();// || nonDownAnim;  
         }
         
     }

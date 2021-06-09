@@ -18,7 +18,8 @@ public class StageCtrl : MonoBehaviour
     //[Header("ステージクリア判定")] public PlayerTriggerCheck stageClearTrigger;
 
     private int nextStageNum; 
-    private bool startFade = false; 
+    private bool startFade = false;
+    [SerializeField]
     private bool doGameOver = false; 
     private bool retryGame = false; 
     private bool doSceneChange = false; 
@@ -46,14 +47,15 @@ public class StageCtrl : MonoBehaviour
     void Update()
     {
         //ゲームオーバー時の処理
-        if (GManager.instance.isGameOver && !doGameOver)
+        if (GManager.instance.isGameOver)// && !doGameOver)
         {
+
             gameOverObj.SetActive(true);
             //GManager.instance.PlaySE(gameOverSE); 
-            doGameOver = true;
+            //doGameOver = true;
         }
         //プレイヤーがやられた時の処理
-        else if (p != null && p.IsContinueWaiting() && !doGameOver)
+        else if (p != null && p.isDown) //p.IsContinueWaiting()) //&& !doGameOver)
         {
             if (continuePoint.Length > GManager.instance.continueNum)
             {
