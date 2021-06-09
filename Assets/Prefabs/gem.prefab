@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6113480638384550725}
   - component: {fileID: 6113480638384550726}
   - component: {fileID: 6113480638384550721}
+  - component: {fileID: 400639810}
   m_Layer: 0
   m_Name: gem
   m_TagString: gem
@@ -142,4 +143,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28775e8c25d90c84ea4f9359bc9b3bb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  point: 100
+  myScore: 100
+  playerCheck: {fileID: 400639810}
+  itemSE: {fileID: 8300000, guid: b9703806690cb49a58ab182032cad276, type: 3}
+--- !u!114 &400639810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113480638384550730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295afafd1f56c3749adfd1125a8dd349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0

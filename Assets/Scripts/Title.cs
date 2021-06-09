@@ -7,6 +7,7 @@ public class Title : MonoBehaviour
 {
     [Header("フェード")] 
     public FadeImage fade;
+    //[Header("ゲームスタート時に鳴らすSE")] public AudioClip startSE;
     private bool firstPush = false;
     private bool goNextScene = false;
     // スタートボタンが押されると呼ばれる
@@ -15,7 +16,7 @@ public class Title : MonoBehaviour
             
         if (!firstPush)
         {
-            Debug.Log("Go Next Scene!");
+            //GManager.instance.PlaySE(startSE);
             fade.StartFadeOut();
             firstPush = true;
         }

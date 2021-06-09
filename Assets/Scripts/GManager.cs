@@ -20,6 +20,10 @@ public class GManager : MonoBehaviour
     public int defaultLifeNum;
     [HideInInspector] 
     public bool isGameOver = false;
+    [HideInInspector] public bool isStageClear = false;
+
+    private AudioSource audioSource = null;
+
 
     private void Awake()
     {
@@ -32,6 +36,10 @@ public class GManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
     }
     /// <summary>
     /// スコア表示を更新
@@ -66,4 +74,30 @@ public class GManager : MonoBehaviour
             isGameOver = true;
         }
     }
+    /// <summary> 
+    /// 最初から始める時の処理    New! 
+    /// </summary> 
+    public void RetryGame()
+    {
+        isGameOver = false;
+        lifeNum = defaultLifeNum;
+        score = 0;
+        stageNum = 1;
+        continueNum = 0;
+    }
+    /// <summary>
+    /// SEを鳴らす
+    /// </summary>
+    public void PlaySE(AudioClip clip)
+    {
+        if (audioSource != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+        else
+        {
+            Debug.Log("オーディオソースが設定されていません");
+        }
+    }
 }
+

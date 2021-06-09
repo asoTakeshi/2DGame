@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private string jump = "Jump";　　　　　　　　// キー入力用の文字列指定
     private Rigidbody2D rb;                      // コンポーネントの取得用
     private Animator anim;
-    private float limitPosX = 45.5f;           // 横方向の制限値
+    private float limitPosX = 100.5f;           // 横方向の制限値
     private float limitPosY = 11.45f;          // 縦方向の制限値
     private float scale;                         // 向きの設定に利用する
     public float moveSpeed;                      // 移動速度
@@ -28,9 +28,18 @@ public class PlayerController : MonoBehaviour
     public GManager gManager;
     private string enemyTag = "Enemy";
     private bool isDown = false;
-   // private bool nonDownAnim = false;
     private string deadAreaTag = "DeadArea";
     public UIManager uiManager;
+    private bool isJump = false;
+    private bool isOtherJump = false;
+    private bool isRun = false; 
+    private bool nonDownAnim = false;
+    private bool isClearMotion = false;
+    //[Header("ジャンプする時に鳴らすSE")] public AudioClip jumpSE; 
+    //[Header("やられた鳴らすSE")] public AudioClip downSE; 
+    //[Header("コンティニュー時に鳴らすSE")] public AudioClip continueSE;  
+
+
 
 
 
@@ -58,6 +67,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
 
         scale = transform.localScale.x;
+
     }
     void Update()
     {
@@ -96,7 +106,10 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    //やられた時の処理 New!
+
+
+
+    //やられた時の処理 
     private void ReceiveDamage(bool downAnim)
     {
         if (isDown)
@@ -111,9 +124,10 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                //nonDownAnim = true;
+                nonDownAnim = true;
             }
             isDown = true;
+            //GManager.instance.PlaySE(downSE);  
             GManager.instance.SubLifeNum();
         }
     }
@@ -149,8 +163,20 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!isDown && !GManager.instance.isGameOver && !GManager.instance.isStageClear)
+        {
 
-        
+        }
+        else
+        {
+            if (!isClearMotion && GManager.instance.isStageClear)
+            {
+                anim.Play("player_clear");
+                isClearMotion = true;
+            }
+           
+        }
+
         // 移動
         Move();
     }
@@ -224,9 +250,22 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// コンティニュー待機状態か    
+    /// </summary>    
+    /// <returns></returns>  
+
     public bool IsContinueWaiting()
     {
-        return IsDownAnimEnd();
+        if (GManager.instance.isGameOver)  
+        {
+            return false;
+        }
+        else
+        {
+            return IsDownAnimEnd() || nonDownAnim;  
+        }
+        
     }
 
     private bool IsDownAnimEnd()
@@ -261,5 +300,24 @@ public class PlayerController : MonoBehaviour
         // 画面にゲームオーバー表示を行う
         //uiManager.DisplayGameOverInfo();
     }
-
+    /// <summary>
+    /// コンティニューする
+    /// </summary>
+    public void ContinuePlayer()
+    {
+        //GManager.instance.PlaySE(continueSE);  //New! 
+        isDown = false;
+        anim.Play("Cindy_Idle");
+        isJump = false;
+        isOtherJump = false;
+        isRun = false;
+        nonDownAnim = false;    
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == deadAreaTag)
+        {
+            ReceiveDamage(false);
+        }
+    }
 }
