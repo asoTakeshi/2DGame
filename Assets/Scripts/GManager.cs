@@ -23,6 +23,8 @@ public class GManager : MonoBehaviour
     //[HideInInspector] public bool isStageClear = false;
     [SerializeField]
     private ResultPopUp resultPopUpPrefab;
+    [HideInInspector] 
+    public bool isStageClear = false;
 
     [SerializeField]
     private Transform canvasTran;

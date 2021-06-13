@@ -165,7 +165,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isDown && !GManager.instance.isGameOver)
+        if (!isDown && !GManager.instance.isGameOver && !GManager.instance.isStageClear)
         {
 
         }
