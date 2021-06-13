@@ -1,19 +1,18 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Title : MonoBehaviour
+public class NextBtn : MonoBehaviour
 {
-    [Header("フェード")] 
+    [Header("�t�F�[�h")]
     public FadeImage fade;
-    //[Header("ゲームスタート時に鳴らすSE")] public AudioClip startSE;
+    //[Header("�Q�[���X�^�[�g���ɖ炷SE")] public AudioClip startSE;
     private bool firstPush = false;
     private bool goNextScene = false;
-    // スタートボタンが押されると呼ばれる
-    public void PressStart()
+    public void Next()
     {
-            
+
         if (!firstPush)
         {
             //GManager.instance.PlaySE(startSE);
@@ -25,9 +24,8 @@ public class Title : MonoBehaviour
     {
         if (!goNextScene && fade.IsFadeOutComplete())
         {
-            SceneManager.LoadScene("Stage1");
+            SceneManager.LoadScene("Stage2");
             goNextScene = true;
         }
     }
-
 }

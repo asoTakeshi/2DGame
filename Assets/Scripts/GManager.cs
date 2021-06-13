@@ -8,19 +8,24 @@ public class GManager : MonoBehaviour
     public static GManager instance = null;
     [SerializeField]
     private Text txtScore;        // txtScore ゲームオブジェクトの持つ Text コンポーネントをインスペクターからアサインする
-    [Header("スコア")] 
+    [Header("スコア")]
     public int score;
-    [Header("現在のステージ")] 
+    [Header("現在のステージ")]
     public int stageNum;
-    [Header("現在の復帰位置")] 
+    [Header("現在の復帰位置")]
     public int continueNum;
-    [Header("現在の残機")] 
+    [Header("現在の残機")]
     public int lifeNum;
     [Header("デフォルトの残機")]
     public int defaultLifeNum;
     //[HideInInspector] 
     public bool isGameOver = false;
     //[HideInInspector] public bool isStageClear = false;
+    [SerializeField]
+    private ResultPopUp resultPopUpPrefab;
+
+    [SerializeField]
+    private Transform canvasTran;
 
     private AudioSource audioSource = null;
 
@@ -98,6 +103,17 @@ public class GManager : MonoBehaviour
         {
             Debug.Log("オーディオソースが設定されていません");
         }
+    }
+    /// <summary>
+    /// ResultPopUpの生成
+    /// </summary>
+    public void GenerateResultPopUp(int score)
+    {
+        // ResultPopUp を生成
+        ResultPopUp resultPopUp = Instantiate(resultPopUpPrefab, canvasTran, false);
+
+        // ResultPopUp の設定を行う
+        resultPopUp.SetUpResultPopUp(score);
     }
 }
 

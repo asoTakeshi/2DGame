@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public bool isDown = false;
     private string deadAreaTag = "DeadArea";
-    public UIManager uiManager;
+    //public UIManager uiManager;
     private bool isJump = false;
     private bool isOtherJump = false;
     private bool isRun = false; 

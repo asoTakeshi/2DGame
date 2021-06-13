@@ -25,6 +25,7 @@ public class StageCtrl : MonoBehaviour
     private bool doSceneChange = false; 
     private PlayerController p;
     private bool doClear = false;
+    private bool nextStage;
 
     void Start()
     {
@@ -96,7 +97,7 @@ public class StageCtrl : MonoBehaviour
     }
 
     /// <summary>
-    /// 最初から始める New!
+    /// 最初から始める 
     /// </summary>
     public void Retry()
     {
@@ -106,7 +107,7 @@ public class StageCtrl : MonoBehaviour
     }
 
     /// <summary>
-    /// ステージを切り替えます。 New!
+    /// ステージを切り替えます。
     /// </summary>
     /// <param name="num">ステージ番号</param>
     public void ChangeScene(int num)
@@ -118,11 +119,17 @@ public class StageCtrl : MonoBehaviour
             startFade = true;
         }
     }
+
+    public void NextStage()
+    {
+        ChangeScene(2);
+    }
     /// <summary>
     /// ステージをクリアした
     /// </summary>
     public void StageClear()
     {
+
         
         //GManager.instance.PlaySE(stageClearSE);
     }
