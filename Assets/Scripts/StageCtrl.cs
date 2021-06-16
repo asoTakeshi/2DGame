@@ -99,12 +99,12 @@ public class StageCtrl : MonoBehaviour
     /// <summary>
     /// 最初から始める 
     /// </summary>
-    //public void Retry()
-    //{
-    //    ChangeScene(1); //最初のステージに戻るので１
-    //    //GManager.instance.PlaySE(retrySE); 
-    //    retryGame = true;
-    //}
+    public void Retry()
+    {
+        ChangeScene(1); //最初のステージに戻るので１
+        //GManager.instance.PlaySE(retrySE); 
+        retryGame = true;
+    }
 
     /// <summary>
     /// ステージを切り替えます。
