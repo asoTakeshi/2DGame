@@ -24,12 +24,12 @@ public class StageNum : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (oldStageNum != GManager.instance.stageNum)
-        {
-            stageText.text = "Stage " + GManager.instance.stageNum;
-            oldStageNum = GManager.instance.stageNum;
-        }
-    }
+    //void Update()
+    //{
+    //    if (oldStageNum != GManager.instance.stageNum)
+    //    {
+    //        stageText.text = "Stage " + GManager.instance.stageNum;
+    //        oldStageNum = GManager.instance.stageNum;
+    //    }
+    //}
 }

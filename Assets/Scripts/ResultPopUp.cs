@@ -36,7 +36,7 @@ public class ResultPopUp : MonoBehaviour
         txtScore.text = score.ToString();
 
         // リスタートのメッセージをゆっくりと点滅アニメさせる(学習済の命令です。復習しておきましょう)
-        canvasGroupRestart.DOFade(0, 1.0f).SetEase(Ease.InOutQuad).SetLoops(-1, LoopType.Yoyo);
+        //canvasGroupRestart.DOFade(0, 1.0f).SetEase(Ease.InOutQuad).SetLoops(-1, LoopType.Yoyo);
 
         // ボタンにメソッドを登録
         //btnTitle.onClick.AddListener(OnClickRestart);
@@ -45,29 +45,29 @@ public class ResultPopUp : MonoBehaviour
     /// <summary>
     /// ボタンを押した際の制御
     /// </summary>
-    private void OnClickRestart()
-    {
+    //private void OnClickRestart()
+    //{
 
-        // リザルト表示を徐々に非表示にする
-        canvasGroup.DOFade(0, 1.0f).SetEase(Ease.Linear);
+    //    // リザルト表示を徐々に非表示にする
+    //    canvasGroup.DOFade(0, 1.0f).SetEase(Ease.Linear);
 
-        // 現在のシーンを再度読み込む
-        StartCoroutine(Restart());
-    }
+    //    // 現在のシーンを再度読み込む
+    //    StartCoroutine(Restart());
+    //}
 
     // <summary>
     // 現在のシーンを再度読み込む
     // </summary>
     //<returns></returns>
-    private IEnumerator Restart()
-    {
-        yield return new WaitForSeconds(1.0f);
+    //private IEnumerator Restart()
+    //{
+    //    yield return new WaitForSeconds(1.0f);
 
-        // 現在のシーンの名前を取得
-        string sceneName = SceneManager.GetActiveScene().name;
+    //    // 現在のシーンの名前を取得
+    //    string sceneName = SceneManager.GetActiveScene().name;
 
-        // 再度読み込み、ゲームを再スタート
-        SceneManager.LoadScene(sceneName);
-    }
-    
+    //    // 再度読み込み、ゲームを再スタート
+    //    SceneManager.LoadScene(sceneName);
+    //}
+
 }

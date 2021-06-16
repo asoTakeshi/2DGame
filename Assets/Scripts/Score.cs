@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
+    [SerializeField]
     private Text scoreText = null;
     private int oldScore = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        scoreText = GetComponent<Text>();
         if (GManager.instance != null)
         {
             scoreText.text = "Score " + GManager.instance.score;
@@ -31,5 +31,9 @@ public class Score : MonoBehaviour
             scoreText.text = "Score " + GManager.instance.score;
             oldScore = GManager.instance.score;
         }
+    }
+    public void UpdateDisplayScore(int score)
+    {
+        scoreText.text = score.ToString();
     }
 }

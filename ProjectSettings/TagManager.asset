@@ -11,6 +11,7 @@ TagManager:
   - gem
   - Ground
   - DeadArea
+  - Canvas
   layers:
   - Default
   - TransparentFX

@@ -87,7 +87,7 @@ public class StageCtrl : MonoBehaviour
                 //次のステージ
                 else
                 {
-                    GManager.instance.stageNum = nextStageNum;
+                    GManager.instance.stageNum++;
                 }
                
                 SceneManager.LoadScene("stage" + nextStageNum);
@@ -99,12 +99,12 @@ public class StageCtrl : MonoBehaviour
     /// <summary>
     /// 最初から始める 
     /// </summary>
-    public void Retry()
-    {
-        ChangeScene(1); //最初のステージに戻るので１
-        //GManager.instance.PlaySE(retrySE); 
-        retryGame = true;
-    }
+    //public void Retry()
+    //{
+    //    ChangeScene(1); //最初のステージに戻るので１
+    //    //GManager.instance.PlaySE(retrySE); 
+    //    retryGame = true;
+    //}
 
     /// <summary>
     /// ステージを切り替えます。
@@ -120,10 +120,7 @@ public class StageCtrl : MonoBehaviour
         }
     }
 
-    public void NextStage()
-    {
-        ChangeScene(2);
-    }
+    
     /// <summary>
     /// ステージをクリアした
     /// </summary>

@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class GManager : MonoBehaviour
 {
     public static GManager instance = null;
-    [SerializeField]
-    private Text txtScore;        // txtScore ゲームオブジェクトの持つ Text コンポーネントをインスペクターからアサインする
     [Header("スコア")]
     public int score;
     [Header("現在のステージ")]
@@ -25,9 +23,6 @@ public class GManager : MonoBehaviour
     private ResultPopUp resultPopUpPrefab;
     [HideInInspector] 
     public bool isStageClear = false;
-
-    [SerializeField]
-    private Transform canvasTran;
 
     private AudioSource audioSource = null;
 
@@ -52,10 +47,10 @@ public class GManager : MonoBehaviour
     /// スコア表示を更新
     /// </summary>
     /// <param name="score"></param>
-    public void UpdateDisplayScore(int score)
-    {
-        txtScore.text = score.ToString();
-    }
+    //public void UpdateDisplayScore(int score)
+    //{
+    //    txtScore.text = score.ToString();
+    //}
     /// <summary>
     /// 残機を１つ増やす
     /// </summary>
@@ -82,14 +77,14 @@ public class GManager : MonoBehaviour
         }
     }
     /// <summary> 
-    /// 最初から始める時の処理    New! 
+    /// 最初から始める時の処理    
     /// </summary> 
     public void RetryGame()
     {
         isGameOver = false;
         lifeNum = defaultLifeNum;
         score = 0;
-        stageNum = 1;
+        //stageNum = 1;
         continueNum = 0;
     }
     /// <summary>
@@ -109,8 +104,10 @@ public class GManager : MonoBehaviour
     /// <summary>
     /// ResultPopUpの生成
     /// </summary>
-    public void GenerateResultPopUp(int score)
+    public void GenerateResultPopUp()
     {
+        //Debug.Log(score);
+        Transform canvasTran = GameObject.FindGameObjectWithTag("Canvas").transform;
         // ResultPopUp を生成
         ResultPopUp resultPopUp = Instantiate(resultPopUpPrefab, canvasTran, false);
 

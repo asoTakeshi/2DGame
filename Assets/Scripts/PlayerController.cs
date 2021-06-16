@@ -18,14 +18,12 @@ public class PlayerController : MonoBehaviour
     bool gojump = false;
     private bool isGameOver = false;                    // GameOver状態の判定用。true ならゲームオーバー。
     public float knockbackPower;              // 敵と接触した際に吹き飛ばされる力
-    public int gemPoint;                       // コインを獲得すると増えるポイントの総数
     public GameObject bulletPrefab;
     public Transform shotPoint;
     float coolTime = 0.3f;                       //待機時間
     float leftCoolTime;　　　　　　　　　　 // 待機している時間
     bool isRight;
-    public int coinPoint;
-    public GManager gManager;
+    //public GManager gManager;
     private string enemyTag = "Enemy";
     [SerializeField]
     public bool isDown = false;
