@@ -53,6 +53,7 @@ public class PlayersController : MonoBehaviour
 
     void Update()
     {
+        Shot();
         if (gameStste != "playing")
         {
             return;
@@ -68,20 +69,20 @@ public class PlayersController : MonoBehaviour
         {
             //右移動
             Debug.Log("右移動");
-            transform.localScale = new Vector2(1, 1);
+            transform.localScale = new Vector2(3, 3);
         }
         else if (axisH < 0.0f)
         {
             //左移動
             Debug.Log("左移動");
-            transform.localScale = new Vector2(-1, 1);     //左右反転
+            transform.localScale = new Vector2(-3, 3);     //左右反転
         }
         //キャラクターをジャンプさせる
         if (Input.GetButtonDown("Jump"))
         {
             Jump();  //ジャンプ
         }
-        Shot();
+        
 
     }
 
@@ -153,6 +154,10 @@ public class PlayersController : MonoBehaviour
             Goal();   //ゴール
         }
         else if (col.gameObject.tag == "Dead")
+        {
+            GameOver();    //ゲームオーバー
+        }
+        else if (col.gameObject.tag == "Enemy")
         {
             GameOver();    //ゲームオーバー
         }
@@ -230,15 +235,17 @@ public class PlayersController : MonoBehaviour
         leftCoolTime -= Time.deltaTime;
         if (leftCoolTime <= 0)
         {
-
+            
             if (Input.GetButtonDown("Attack"))
             {
+                
                 GameObject bullet = Instantiate(bulletPrefab, shotPoint.position, transform.rotation);
 
                 bullet.GetComponent<BulletManeger>().Shot(transform.localScale.x / 3);
                 leftCoolTime = coolTime;
             }
         }
+        
     }
 
 }

@@ -150,7 +150,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895370050653203128}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eed8269954384924596d338571bf0c20, type: 3}
   m_Name: 
@@ -159,16 +159,19 @@ MonoBehaviour:
   jumpPower: 650
   isGrounded: 0
   knockbackPower: 0
-  gemPoint: 0
   bulletPrefab: {fileID: 3874888852040915720, guid: 54e725e35c0b5d5408145c532131f99b, type: 3}
   shotPoint: {fileID: 1895370050816188486}
-  coinPoint: 0
-  gManager: {fileID: 0}
   isDown: 0
-  uiManager: {fileID: 0}
+  speed: 3
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  stopAnime: PlayerStop
+  moveAnime: PlayerMove
+  jumpAnime: PlayerJump
+  goalAnime: PlayerGoal
+  deadAnime: PlayerOver
+  score: 0
   knockbackEffectPrefab: {fileID: 5132835240957359125, guid: c3d048186e719c34d902a7d00264732f, type: 3}
   coinEffectPrefab: {fileID: 6113480638384550730, guid: 41ae0f5856e6cc144a2f5d48b37ecedd, type: 3}
 --- !u!1 &1895370050816188485

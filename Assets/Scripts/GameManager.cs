@@ -5,6 +5,9 @@ using UnityEngine.UI;     //UIを使う
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance = null;
+    [Header("スコア")]
+    public int score;
     public GameObject mainImage;       //画像を持つGameObject
     public Sprite gameOverSpr;         // GameOver画像
     public Sprite gameCleraSpr;        // GameClera画像
@@ -29,6 +32,18 @@ public class GameManager : MonoBehaviour
     public GameObject inputUI;
 
 
+    //private void Awake()
+    //{
+    //    if (instance == null)
+    //    {
+    //        instance = this;
+    //        DontDestroyOnLoad(this.gameObject);
+    //    }
+    //    else
+    //    {
+    //        Destroy(this.gameObject);
+    //    }
+    //}
     void Start()
     {
         //画像を非表示にする
