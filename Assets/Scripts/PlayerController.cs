@@ -61,13 +61,6 @@ public class PlayerController : MonoBehaviour
     bool isMoving = false;           //タ
 
 
-
-
-
-
-
-
-
     //[SerializeField, Header("Linecast用 地面判定レイヤー")]
     //private LayerMask groundLayer;
     //[SerializeField]
@@ -212,7 +205,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isDown && !GManager.instance.isGameOver && !GManager.instance.isStageClear)
+        //if (!isDown && !GManager.instance.isGameOver && !GManager.instance.isStageClear)
         {
 
         }

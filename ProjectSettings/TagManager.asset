@@ -12,6 +12,10 @@ TagManager:
   - Ground
   - DeadArea
   - Canvas
+  - Dead
+  - ScoreItem
+  - Switch
+  - Goal
   layers:
   - Default
   - TransparentFX
