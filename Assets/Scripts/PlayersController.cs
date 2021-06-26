@@ -31,9 +31,9 @@ public class PlayersController : MonoBehaviour
     public string stopAnime = "PlayerStop";
     public string moveAnime = "PlayerMove";
     public string jumpAnime = "PlayerJump";
-    public string goalAnime = "PlayerGoal";
+    //public string goalAnime = "PlayerGoal";
     public string deadAnime = "PlayerOver";
-    public string jumpDownAnime = "PlayerJumpFall";
+    //public string jumpDownAnime = "PlayerJumpFall";
     string nowAnime = "";
     string oldAnime = "";
     public static string gameStste = "playing";   //ゲームの状態
@@ -68,13 +68,13 @@ public class PlayersController : MonoBehaviour
         if (axisH > 0.0f)
         {
             //右移動
-            Debug.Log("右移動");
+            //Debug.Log("右移動");
             transform.localScale = new Vector2(3, 3);
         }
         else if (axisH < 0.0f)
         {
             //左移動
-            Debug.Log("左移動");
+            //Debug.Log("左移動");
             transform.localScale = new Vector2(-3, 3);     //左右反転
         }
         //キャラクターをジャンプさせる
@@ -106,7 +106,7 @@ public class PlayersController : MonoBehaviour
         {
             //地面の上でジャンプキーが押された
             //ジャンプさせる
-            Debug.Log("ジャンプ！");
+            //Debug.Log("ジャンプ！");
             Vector2 jumpPw = new Vector2(0, jump);    //ジャンプさせるベクトルを作る
             rb.AddForce(jumpPw, ForceMode2D.Impulse);   //瞬間的な力を加える
             goJump = false;                           //ジャンプフラグを下ろす
@@ -140,7 +140,7 @@ public class PlayersController : MonoBehaviour
     public void Jump()
     {
         goJump = true;      //ジャンプフラグを立てる
-        Debug.Log("ジャンプボタンを押した");
+        //Debug.Log("ジャンプボタンを押した");
     }
 
     /// <summary>
@@ -151,14 +151,17 @@ public class PlayersController : MonoBehaviour
     {
         if (col.gameObject.tag == "Goal")
         {
+            //Debug.Log("ゴール");
             Goal();   //ゴール
         }
         else if (col.gameObject.tag == "Dead")
         {
+            //Debug.Log("GameOver");
             GameOver();    //ゲームオーバー
         }
         else if (col.gameObject.tag == "Enemy")
         {
+            //Debug.Log("GameOver");
             GameOver();    //ゲームオーバー
         }
         else if (col.gameObject.tag == "ScoreItem")
@@ -180,7 +183,7 @@ public class PlayersController : MonoBehaviour
     public void Goal()
     {
         Debug.Log("ゴール");
-        animator.Play(goalAnime);
+        //animator.Play(goalAnime);
         gameStste = "gameclear";
         GameStop();       //ゲーム停止
     }
@@ -190,8 +193,10 @@ public class PlayersController : MonoBehaviour
     /// </summary>
     public void GameOver()
     {
+        //Debug.Log("GameOver");
         animator.Play(deadAnime);
         gameStste = "gameover";
+        Debug.Log("GameOver");
         GameStop();       //ゲーム停止
         //===================
         //ゲームオーバー演出

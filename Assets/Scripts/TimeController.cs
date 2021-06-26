@@ -46,7 +46,7 @@ public class TimeController : MonoBehaviour
                 }
                 
             }
-            Debug.Log("TIMES:" + displayTime);
+            //Debug.Log("TIMES:" + displayTime);
         }
     }
 }

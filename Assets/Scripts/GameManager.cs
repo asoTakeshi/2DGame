@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (PlayerController.gameStste == "gameclear")
+        if (PlayersController.gameStste == "gameclear")
         {
             //ゲームクリア
             mainImage.SetActive(true);         //画像を表示
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
             Button bt = restartButton.GetComponent<Button>();
             bt.interactable = false;
             mainImage.GetComponent<Image>().sprite = gameCleraSpr;     //画像を設定する
-            PlayerController.gameStste = "gameend";
+            PlayersController.gameStste = "gameend";
             if (timeCnt != null)
             {
                 timeCnt.isTimeOver = true;      //時間カウント停止
@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
             inputUI.SetActive(false);     //操作UIを隠す
 
         }
-        else if (PlayerController.gameStste == "gameover")
+        else if (PlayersController.gameStste == "gameover")
         {
             //ゲームオーバー
             mainImage.SetActive(true);         //画像を表示
@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
             Button bt = nextButton.GetComponent<Button>();
             bt.interactable = false;
             mainImage.GetComponent<Image>().sprite = gameOverSpr;     //画像を設定する
-            PlayerController.gameStste = "gameend";
+            PlayersController.gameStste = "gameend";
             if (timeCnt != null)
             {
                 timeCnt.isTimeOver = true;      //時間カウント停止
@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour
             //+++プレイヤー操作+++
             inputUI.SetActive(false);     //操作UIを隠す
         }
-        else if (PlayerController.gameStste == "playing")
+        else if (PlayersController.gameStste == "playing")
         {
             //ゲーム中
             GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -178,7 +178,7 @@ public class GameManager : MonoBehaviour
     public void Jump()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        PlayerController playerCnt = player.GetComponent<PlayerController>();
+        PlayersController playerCnt = player.GetComponent<PlayersController>();
         playerCnt.Jump();
     }
 }
