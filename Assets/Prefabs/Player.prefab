@@ -121,7 +121,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -155,8 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed8269954384924596d338571bf0c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpPower: 650
+  moveSpeed: 6
+  jumpPower: 1000
   isGrounded: 0
   knockbackPower: 0
   bulletPrefab: {fileID: 3874888852040915720, guid: 54e725e35c0b5d5408145c532131f99b, type: 3}

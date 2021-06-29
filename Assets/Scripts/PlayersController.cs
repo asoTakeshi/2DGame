@@ -24,7 +24,9 @@ public class PlayersController : MonoBehaviour
 
     //[SerializeField]
     //private GameObject coinEffectPrefab; 　　　　　　//コインと接触した際に生成するエフェクト用のプレファブのゲームオブジェクトをアサインする
-
+    public GameObject impactPrefab;
+    [Header("攻撃力")]
+    public int at;
 
     //アニメーション対応
     Animator animator;     //アニメーター
@@ -69,13 +71,13 @@ public class PlayersController : MonoBehaviour
         {
             //右移動
             //Debug.Log("右移動");
-            transform.localScale = new Vector2(3, 3);
+            transform.localScale = new Vector3(3, 3 ,3);
         }
         else if (axisH < 0.0f)
         {
             //左移動
             //Debug.Log("左移動");
-            transform.localScale = new Vector2(-3, 3);     //左右反転
+            transform.localScale = new Vector3(-3, 3, 3);     //左右反転
         }
         //キャラクターをジャンプさせる
         if (Input.GetButtonDown("Jump"))
@@ -252,5 +254,29 @@ public class PlayersController : MonoBehaviour
         }
         
     }
+    //private void OnCollisionEnter2D(Collision2D col)
+    //{
+    //    //敵に当たったら
+    //    if (col.gameObject.tag == "Enemy")
+    //    {
+
+    //        //ダメージを与える
+    //        EnemyManager enemy = col.gameObject.GetComponent<EnemyManager>();
+    //        enemy.OnDamage(at);
+
+    //        GameObject effect = Instantiate(impactPrefab, transform.position, transform.rotation);
+
+    //        Destroy(effect, 1.0f);
+    //        //破裂
+    //        //Destroy(col.gameObject);
+
+    //        Destroy(gameObject);
+    //    }
+    //    else
+    //    {
+    //        Destroy(gameObject);
+    //    }
+
+    //}
 
 }
