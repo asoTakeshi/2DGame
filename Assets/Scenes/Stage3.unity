@@ -2345,6 +2345,18 @@ PrefabInstance:
       propertyPath: sceneName
       value: Stage4
       objectReference: {fileID: 0}
+    - target: {fileID: 5039264008001421190, guid: fc64a8656ee942645a2f91a4e4114ce5, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039264008001421190, guid: fc64a8656ee942645a2f91a4e4114ce5, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039264008001421190, guid: fc64a8656ee942645a2f91a4e4114ce5, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 6732365017947915403, guid: fc64a8656ee942645a2f91a4e4114ce5, type: 3}
       propertyPath: sceneName
       value: Stage3

@@ -2078,24 +2078,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8378417595477642519, guid: ee15b0880529b9944ae5975c834557df, type: 3}
   m_PrefabInstance: {fileID: 671317897}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &703016556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703016555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f4669ed7d90514cb2b5470dfc58fd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myScore: 0
-  hp: 5
-  deathEffectPrefab: {fileID: 5132835240957359125, guid: c3d048186e719c34d902a7d00264732f, type: 3}
-  speed: 0
-  directino: left
-  range: 0
 --- !u!50 &703016557
 Rigidbody2D:
   serializedVersion: 4
@@ -2707,24 +2689,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8378417595477642519, guid: ee15b0880529b9944ae5975c834557df, type: 3}
   m_PrefabInstance: {fileID: 1881430945}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1881430947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1881430946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f4669ed7d90514cb2b5470dfc58fd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myScore: 0
-  hp: 5
-  deathEffectPrefab: {fileID: 5132835240957359125, guid: c3d048186e719c34d902a7d00264732f, type: 3}
-  speed: 0
-  directino: left
-  range: 0
 --- !u!50 &1881430948
 Rigidbody2D:
   serializedVersion: 4
@@ -2808,24 +2772,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8378417595477642519, guid: ee15b0880529b9944ae5975c834557df, type: 3}
   m_PrefabInstance: {fileID: 1534910398}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2039131666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039131665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f4669ed7d90514cb2b5470dfc58fd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myScore: 0
-  hp: 5
-  deathEffectPrefab: {fileID: 5132835240957359125, guid: c3d048186e719c34d902a7d00264732f, type: 3}
-  speed: 0
-  directino: left
-  range: 0
 --- !u!50 &2039131667
 Rigidbody2D:
   serializedVersion: 4
@@ -2970,24 +2916,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8378417595477642519, guid: ee15b0880529b9944ae5975c834557df, type: 3}
   m_PrefabInstance: {fileID: 2115550778}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2115550780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115550779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f4669ed7d90514cb2b5470dfc58fd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myScore: 0
-  hp: 5
-  deathEffectPrefab: {fileID: 5132835240957359125, guid: c3d048186e719c34d902a7d00264732f, type: 3}
-  speed: 0
-  directino: left
-  range: 0
 --- !u!50 &2115550781
 Rigidbody2D:
   serializedVersion: 4

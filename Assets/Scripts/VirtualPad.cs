@@ -59,7 +59,7 @@ public class VirtualPad : MonoBehaviour
         //タブを移動させる
         GetComponent<RectTransform>().localPosition = newTabPos;
         //プレイヤーキャラを移動させる
-        PlayerController plcnt = player.GetComponent<PlayerController>();
+        PlayersController plcnt = player.GetComponent<PlayersController>();
         //plcnt.SetAxis(axis.x, axis.y);
     }
 
@@ -71,7 +71,7 @@ public class VirtualPad : MonoBehaviour
         //タブ位置の初期化
         GetComponent<RectTransform>().localPosition = defPos;
         //プレイヤーキャラを停止させる
-        PlayerController plcnt = player.GetComponent<PlayerController>();
+        PlayersController plcnt = player.GetComponent<PlayersController>();
         //plcnt.SetAxis(0, 0);
     }
 }
